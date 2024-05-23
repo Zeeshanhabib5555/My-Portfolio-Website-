@@ -13,16 +13,16 @@
         <div class="contanier">
             <nav>
                 <img src="images/fontlogo1.png" class="frontlogo">
-                <ul>
+                <ul id="sidemenu">
                     <li> <a href="#"> Home </a></li>
                     <li> <a href="#"> About </a></li>
                     <li> <a href="#"> Services </a></li>
                     <li> <a href="#"> Portfolio </a></li>
                     <li> <a href="#"> Contact </a></li>
-                    <i class="fa-solid fa-square-xmark"></i>
+                    <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
 
                 </ul>
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" style="padding-right: 20px; cursor: pointer;" onclick="openmenu()"></i>
             </nav>
 
             <div class="header-text">
@@ -215,6 +215,20 @@
 
             event.currentTarget.classList.add("active-link");// show the red line below the link
             document.getElementById(tabname).classList.add("active-tab"); 
+        }
+
+    </script>
+
+    <!-- ---------------------------------Small Screen Script (Sidemenu)--------------------------------------->
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
         }
 
     </script>
